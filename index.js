@@ -82,10 +82,13 @@ console.log(temperatureCtoF(24));
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temperature, unit) {
+let 
+let 
+return
 }
 
+console.log(temperatureInF(24));
 
 /**
  * ### Challenge `makePersonObject`
@@ -103,7 +106,7 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
 }
 
