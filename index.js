@@ -64,7 +64,7 @@ let celsiusFormula = celsiusTemp * 9 / 5 + 32;
 return celsiusFormula;
 }
 
-console.log(temperatureCtoF(24));
+// console.log(temperatureCtoF(24));
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -83,12 +83,10 @@ console.log(temperatureCtoF(24));
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
 function temperatureInF(temperature, unit) {
-let 
-let 
-return
+
 }
 
-console.log(temperatureInF(24));
+// console.log(temperatureInF(24));
 
 /**
  * ### Challenge `makePersonObject`
@@ -146,7 +144,7 @@ function getName(/* code here */) {
 function appleIndex(/* code here */) {
   /* code here */
 }
-
+// console.log(appleIndex([orange, apple,banana, mango]))
 /**
  * ### Challenge `isItAnApple`
  * 
@@ -162,11 +160,20 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+let fruit = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango']
+function isItAnApple(fruit) {
+  let array = []
+  for (i = 0; i < fruit.length; i++){
+    if (fruit[i]==="apple"){
+    array.push(true)
+    }
+    else {
+      array.push(false)
+    }
+  }
+  return array
 }
-
-
+console.log(isItAnApple(fruit))
 
 
 // ⭐️ Example Test Data ⭐️
@@ -220,8 +227,13 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  for (i = 0; i < inventory.length; i++){
+    if (i === index){
+      return `This is a ${inventory [i].car_make} ${inventory [i].car_model}`
+    }
+  }
 }
+console.log(getCarInfoByIndex(inventory,0))
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -234,10 +246,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  let item = inventory[inventory.length-1]
+  return `This is a ${item.car_make} ${item.car_model}`
 }
-
+console.log(getLastCarInfo(inventory))
 /**
  * ### Challenge `getModelYears`
  * 
@@ -247,9 +260,14 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(carArray) {
+  let carYears = [] //this is telling the computer that carYears is an empty array and we are going to push the values into it
+  for (let i = 0; i < carArray.length; i++){
+  carYears.push(carArray[i].car_year) //what do we want it to give us here? thats why we return 
+  }
+  return carYears
 }
+console.log(getModelYears(inventory))
 
 /**
  * ### Challenge `getCarInfoById`
