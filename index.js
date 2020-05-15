@@ -1,5 +1,5 @@
 // ⭐️ Example Challenge start ⭐️
-
+console.log("Is this working?")
 /**
  * ### Challenge `addNumbers`
  * 
@@ -15,6 +15,8 @@
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
+
+console.log(addNumbers(5,3));
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -36,9 +38,11 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return 'Goodbye, ' + name + '. Have a great day.'
 }
+
+console.log(sayGoodbye('Jenny'));
 
 /**
  * ### Challenge `temperatureCtoF`
